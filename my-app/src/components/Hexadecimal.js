@@ -43,7 +43,17 @@ const Hexidecimal = () =>{
             let r = parseInt(hexToConvert.substring(0,2),16);
             let g = parseInt(hexToConvert.substring(2,4),16);
             let b = parseInt(hexToConvert.substring(4,6),16);
-            setHexResponse(`rgb(${r},${g},${b})   ${hexToColor[hex]}`)
+            let newHex = ""
+            for(let i = 0; i < hex.length; i++){
+                if(isCharacterALetter(hex[i])){
+                    let newChar = hex[i].toUpperCase()
+                    newHex += newChar
+                }
+                else{
+                    newHex += hex[i]
+                }
+            }
+            setHexResponse(`rgb(${r},${g},${b})   ${hexToColor[newHex]}`)
         }
     }   
 
