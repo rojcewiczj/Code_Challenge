@@ -1,6 +1,6 @@
 # Code_Challenge
 
-CodingChallenges
+
 A series of code challenges
 
 NOTE that you can use any language you choose and are not limited to JavaScript or other. Be as creative as you can with these challenges.
