@@ -4,7 +4,8 @@ import {useState} from "react"
 const IsVowel = () =>{
     const [vowel, setVowel] = useState("")
     const [vowelResponse, setVowelResponse] = useState("")
-    const vowels = ["a","e","i","o","u"]
+    const vowels = ["a","e","i","o","u","A","E","I","O","U"]
+
     const checkVowel = () =>{
         if(vowels.includes(vowel)){
             setVowelResponse(`Yes! ${vowel} is a vowel!`)
