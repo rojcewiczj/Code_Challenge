@@ -5,7 +5,7 @@ A series of code challenges
 
 NOTE that you can use any language you choose and are not limited to JavaScript or other. Be as creative as you can with these challenges.
 
-Integer Numbers Range
+Integer Numbers Range:
 Write some code with a function/method that accepts two integers x1 and x2 returns all the integers between them. If x2 is lower than x1 it should return -1. Provide output to console or web page.
 
           const IntegerNumberRange = () =>{
@@ -55,7 +55,7 @@ Write some code with a function/method that accepts two integers x1 and x2 retur
               </div>
           )
       }
-Multiplications table
+Multiplications table:
 Write a function/method that writes in the console the multiplication table (from 1 to 10)
       
       
@@ -138,7 +138,7 @@ Write a function/method that writes in the console the multiplication table (fro
                 </div>
             
             </h3>
-Multiplications table on demand
+Multiplications table on demand:
 Write a function/method that writes in the console the multiplication table (in one column) of any number passed as parameter
               
               Multiplication Table on demand
@@ -167,7 +167,7 @@ Write a function/method that writes in the console the multiplication table (in 
             </h3>
         </div>
         
-Calculation
+Calculation:
 Write a program that writes in the console or a web page all the multiples of 23 less than 500 and at the end writes out the sum of all of them. Once working enhance so that the user can provide the multiple and ending number rather than hard coding it.
 
      const MultiplesAndSum = () =>{
@@ -233,10 +233,10 @@ Write a program that writes in the console or a web page all the multiples of 23
             </div>
         )
     }
-max() function/method
+max() function/method:
 Define a function/method max() that takes two numbers as arguments and returns the largest of them in the console or web page.
 
-maxOfThree() function/method
+maxOfThree() function/method:
 Define a function/method maxOfThree() that takes three numbers as arguments and returns the largest of them.
 
 
@@ -310,7 +310,7 @@ Define a function/method maxOfThree() that takes three numbers as arguments and 
         )
     }
     
-isVowel() function/method
+isVowel() function/method:
 Write a function/method that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 
 
@@ -347,10 +347,10 @@ Write a function/method that takes a character (i.e. a string of length 1) and r
               )
           }
           
-Hexadecimal
+Hexadecimal:
 Write a function/method that convert a hexadecimal color, "blue" for example "#0000FF" in its RGB representation rgb(0,0,255)". Give the function/method the name getRGB(). An example in JavaScript would produce the following in the JavaScript console.
 
-Hexadecimal enhanced
+Hexadecimal enhanced:
 Improves the previous function/method so that in addition to the conversion also identifies some basic colors:
 
       
@@ -421,7 +421,7 @@ Improves the previous function/method so that in addition to the conversion also
           )
       }
 
-Create a user feedback form using form/prompt
+Create a user feedback form using form/prompt:
 
   You can use an HTML form or console prompts to collect the 3 pieces of required information. Name, issue, and steps to reproduce the error.
 
@@ -555,7 +555,7 @@ Create a user feedback form using form/prompt
           )
       }
 
-Below you can see how I set up my App() function to allow for moving forward and back through my components without routing
+Below you can see how I set up my App() function to allow for moving forward and back through my components without routing:
 
                              function App() {
                                
