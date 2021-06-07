@@ -3,16 +3,33 @@ import {nameToColor} from './ColorList'
 import {useState} from 'react'
 const Hexidecimal = () =>{
 
-    const createHexToColor = () => {
+    function isCharacterALetter(char) {
+        return (/[a-zA-Z]/).test(char)
+      }
+
+      const createHexToColor = () => {
+       
         let HexToColorObject = {}
         let hexes = Object.values(nameToColor)
         let names = Object.keys(nameToColor)
         for(let i = 0; i < hexes.length; i++){
-            HexToColorObject[hexes[i]] = names[i]
+            let newHex = ""
+            for(let j = 0; j < hexes[i].length; j++){
+                if(isCharacterALetter(hexes[i][j])){
+                    let newChar = hexes[i][j].toUpperCase()
+                    newHex += newChar
+                }
+                else{
+                    newHex += hexes[i][j]
+                }
+            }
+            HexToColorObject[newHex] = names[i]
+            
         }
         return HexToColorObject
+        console.log(HexToColorObject)
     }
-   
+    
     const [hex, setHex] = useState("")
     const [hexResponse, setHexResponse] = useState("")
     const hexToColor = createHexToColor();
