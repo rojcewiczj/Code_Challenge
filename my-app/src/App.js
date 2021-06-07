@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Calculation from './components/Calculation'
+
 import hexadecimal from './components/Hexadecimal'
 import integerNumberRange from './components/IntegerNumberRange'
 import MultiplicationTable from './components/MultiplicationTable'
