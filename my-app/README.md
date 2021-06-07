@@ -552,3 +552,107 @@ Create a user feedback form using form/prompt
               </div>
           )
       }
+
+Below you can see how I set up my App() function to allow for moving forward and back through my components without routing
+
+                             function App() {
+                               
+                               // simple state variable for keeping track of which page the user is on
+                                const [current, setCurrent] = useState("0")
+                                
+                                // functions for returing different components for rendering
+                                const renderIntNumRange=()=>{
+                                  return(
+                                    <IntegerNumberRange/>
+                                  )
+                                }
+                                const renderMultiTable=()=>{
+                                  return(
+                                    <MultiplicationTable/>
+                                  )
+                                }
+                                const renderLargestNum=()=>{
+                                  return(
+                                    <LargestNum/>
+                                  )
+                                }
+                                const renderIsVowel=()=>{
+                                  return(
+                                    <IsVowel/>
+                                  )
+                                }
+                                const renderHex=()=>{
+                                  return(
+                                    <Hexidecimal/>
+                                  )
+                                }
+                                const renderForm = () => {
+                                  return(
+                                    <UserFeedBackForm/>
+                                  )
+                                }
+                                
+                                // object defining key - value relationships for rendering different components based on "page number"
+                                const allComponents = {
+                                  "0" : renderIntNumRange(),
+                                  "1" : renderMultiTable(),
+                                  "2" : renderLargestNum(),
+                                  "3" : renderIsVowel(),
+                                  "4" : renderHex(),
+                                  "5" : renderForm()
+                                }
+                                
+                                // functionality for my next button
+                                const nextProblem =() => {
+                                  let num = parseInt(current)
+                                  num += 1
+                                  let newCurrent = num.toString()
+                                  setCurrent(newCurrent)
+
+                                }
+                                
+                                // functionality for my back button
+                                const backProblem = () => {
+                                  let num = parseInt(current)
+                                  num -= 1
+                                  let newCurrent = num.toString()
+                                  setCurrent(newCurrent)
+                                }
+                                
+                                // based on current page number, decide what to render through object look up
+                                const checkWhatToRender = () => {
+                                  return allComponents[current]
+                                }
+                                
+                                // if you cant go back, dont show the back button
+                                const backOrNot = () => {
+                                  let num = parseInt(current)
+                                  if(num > 0){
+                                    return( <button onClick={()=> backProblem()}>Back</button>)
+                                  }
+                                }
+                                
+                                //if you cant go forward, dont show the forward button
+                                const nextOrNot = () => {
+                                  let num = parseInt(current)
+                                  if(num < 5){
+                                    return( <button onClick={()=> nextProblem()}>Next</button>)
+                                  }
+                                }
+
+
+
+                                return (
+                                  <div className="App"  >
+
+                                    {checkWhatToRender()}
+                                    <div>
+                                    {backOrNot()}
+                                    {nextOrNot()}
+                                  </div>
+
+
+
+                                  </div>
+                                );
+                              }
