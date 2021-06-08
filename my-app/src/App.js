@@ -11,6 +11,7 @@ import LargestNum from './components/LargestNum';
 import IsVowel from './components/IsVowel';
 import Hexidecimal from './components/Hexadecimal';
 import UserFeedBackForm from './components/UserFeedbackForm';
+import MultiplesAndSum from './components/MultiplesAndSum';
 
 function App() {
 
@@ -48,13 +49,20 @@ function App() {
       <UserFeedBackForm/>
     )
   }
+  const renderMultiAndSum = () => {
+    return(
+      <MultiplesAndSum/>
+      )
+    
+  }
   const allComponents = {
     "0" : renderIntNumRange(),
-    "1" : renderMultiTable(),
-    "2" : renderLargestNum(),
-    "3" : renderIsVowel(),
-    "4" : renderHex(),
-    "5" : renderForm()
+    "1" : renderMultiAndSum(),
+    "2" : renderMultiTable(),
+    "3" : renderLargestNum(),
+    "4" : renderIsVowel(),
+    "5" : renderHex(),
+    "6" : renderForm()
   }
 
   const nextProblem =() => {
@@ -83,7 +91,7 @@ function App() {
   }
   const nextOrNot = () => {
     let num = parseInt(current)
-    if(num < 5){
+    if(num < 6){
       return( <button onClick={()=> nextProblem()}>Next</button>)
     }
   }
