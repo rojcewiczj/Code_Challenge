@@ -11,7 +11,10 @@ import LargestNum from './components/LargestNum';
 import IsVowel from './components/IsVowel';
 import Hexidecimal from './components/Hexadecimal';
 import UserFeedBackForm from './components/UserFeedbackForm';
+
 function App() {
+
+  //setting state variable
     
   const [current, setCurrent] = useState("0")
    
