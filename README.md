@@ -171,6 +171,7 @@ Calculation:
 Write a program that writes in the console or a web page all the multiples of 23 less than 500 and at the end writes out the sum of all of them. Once working enhance so that the user can provide the multiple and ending number rather than hard coding it.
 
      const MultiplesAndSum = () =>{
+     
         // function for generating multiples of 23 in a string form
         const allMultiplesOfTwentyThree = (multiple, endingNumber) =>{
             let sum = 0;
